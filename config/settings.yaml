@@ -1,0 +1,74 @@
+# 各环境配置、浏览器配置、通知配置等
+
+# 环境配置
+environments:
+  dev:
+    base_url: "https://dev.example.com"
+    api_base_url: "https://api-dev.example.com"
+    account:
+      username: "test_user_dev"
+      password: "test_password_dev"
+  
+  staging:
+    base_url: "https://staging.example.com"
+    api_base_url: "https://api-staging.example.com"
+    account:
+      username: "test_user_staging"
+      password: "test_password_staging"
+  
+  prod:
+    base_url: "https://www.example.com"
+    api_base_url: "https://api.example.com"
+    account:
+      username: "test_user_prod"
+      password: "test_password_prod"
+
+# 默认环境
+default_environment: "dev"
+
+# 浏览器配置
+browser:
+  type: "chromium"  # chromium | firefox | webkit
+  headless: true
+  slow_mo: 0  # 操作延迟（毫秒），0表示无延迟
+  viewport:
+    width: 1920
+    height: 1080
+  timeout: 30000  # 默认超时时间（毫秒）
+  navigation_timeout: 60000  # 页面导航超时时间（毫秒）
+
+# 钉钉通知配置
+dingtalk:
+  enabled: false
+  webhook: "https://oapi.dingtalk.com/robot/send?access_token=YOUR_TOKEN"
+  secret: ""  # 签名密钥（可选）
+  keyword: "自动化测试"  # 消息关键字
+  at_all: false  # 是否@所有人
+  at_mobiles: []  # 需要@的手机号列表
+
+# 邮件通知配置
+email:
+  enabled: false
+  smtp_server: "smtp.example.com"
+  smtp_port: 587
+  smtp_user: "sender@example.com"
+  smtp_password: "your_password"
+  from_addr: "sender@example.com"
+  to_addrs:  # 收件人列表
+    - "recipient1@example.com"
+    - "recipient2@example.com"
+  subject_prefix: "[自动化测试]"
+
+# 测试报告配置
+report:
+  allure_results_dir: "tests/reports/allure-results"
+  allure_report_dir: "reports/allure-report"
+  screenshot_on_failure: true
+  video_on_failure: false
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG | INFO | WARNING | ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_dir: "tests/logs"
+  log_file: "test_{timestamp}.log"

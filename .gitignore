@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 测试相关
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Allure 报告
+allure-results/
+allure-report/
+reports/allure-results/
+reports/allure-report/
+tests/reports/allure-results/
+tests/reports/allure-report/
+
+# 日志文件
+*.log
+logs/
+tests/logs/
+*.log.*
+
+# 截图和视频
+screenshots/
+videos/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+
+# 临时文件
+*.tmp
+*.temp
+.cache/
+
+# 配置文件中的敏感信息（可选，如果包含真实密码等）
+# config/settings.yaml  # 如果包含敏感信息，取消注释此行
+
+# 操作系统文件
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
+
+# 其他
+*.bak
+*.swp
+*.swo
